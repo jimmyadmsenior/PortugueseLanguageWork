@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 const Rights = () => {
   return (
     <motion.div
-      className="page-container enhanced-card pulse-glow"
+      className="page-container"
+      style={{ background: '#ffffff', color: '#000000', padding: '2rem', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
       initial={{ opacity: 0, y: 50, rotateX: 15 }}
       animate={{ opacity: 1, y: 0, rotateX: 0 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
