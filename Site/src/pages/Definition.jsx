@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 const Definition = () => {
   return (
     <motion.div
-      className="page-container enhanced-card morphing-bg"
+      className="page-container"
+      style={{ background: '#ffffff', color: '#000000', padding: '2rem', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
       initial={{ opacity: 0, scale: 0.8, rotateX: -10 }}
       animate={{ opacity: 1, scale: 1, rotateX: 0 }}
       transition={{ duration: 0.9, ease: "backOut" }}

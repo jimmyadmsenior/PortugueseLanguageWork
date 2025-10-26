@@ -12,6 +12,7 @@ const Home = () => {
       
       <motion.div
         className="page-container enhanced-card"
+        style={{ background: '#ffffff', color: '#000000' }}
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
