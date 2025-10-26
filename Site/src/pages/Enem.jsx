@@ -57,10 +57,10 @@ const Enem = () => {
 
   return (
     <motion.div
-      className="page-container"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      className="page-container enhanced-card pulse-glow"
+      initial={{ opacity: 0, scale: 0.8, rotateX: 20 }}
+      animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+      transition={{ duration: 1, ease: "backOut" }}
     >
       <h1>🎯 Questão ENEM 2012 - Interativa</h1>
       

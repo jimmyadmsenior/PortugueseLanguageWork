@@ -11,12 +11,19 @@ const Home = () => {
       </div>
       
       <motion.div
-        className="page-container"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        className="page-container enhanced-card"
+        initial={{ opacity: 0, y: 50, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
-      <h1>Preconceito Racial no Brasil</h1>
+      <motion.h1 
+        className="gradient-text floating-text"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        Preconceito Racial no Brasil
+      </motion.h1>
       
       <div className="quote">
         <p>

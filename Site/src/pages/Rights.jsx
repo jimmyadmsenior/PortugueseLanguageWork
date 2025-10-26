@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 const Rights = () => {
   return (
     <motion.div
-      className="page-container"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      className="page-container enhanced-card pulse-glow"
+      initial={{ opacity: 0, y: 50, rotateX: 15 }}
+      animate={{ opacity: 1, y: 0, rotateX: 0 }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
     >
       <h1>⚖️ Direitos Negligenciados</h1>
       

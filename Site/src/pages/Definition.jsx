@@ -3,12 +3,19 @@ import { motion } from 'framer-motion'
 const Definition = () => {
   return (
     <motion.div
-      className="page-container"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      className="page-container enhanced-card morphing-bg"
+      initial={{ opacity: 0, scale: 0.8, rotateX: -10 }}
+      animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+      transition={{ duration: 0.9, ease: "backOut" }}
     >
-      <h1>📖 Definição: Preconceito Racial</h1>
+      <motion.h1 
+        className="shimmer-text typewriter"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        📖 Definição: Preconceito Racial
+      </motion.h1>
       
       <div className="quote" style={{ background: '#e8f5e8', border: '4px solid #4caf50' }}>
         <h3 style={{ margin: '0 0 1rem 0', color: '#2e7d32' }}>Verbete de Dicionário</h3>
@@ -33,9 +40,12 @@ const Definition = () => {
 
       <div className="grid">
         <motion.div 
-          className="card"
-          whileHover={{ scale: 1.02 }}
-          style={{ background: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)' }}
+          className="card enhanced-card glow-effect magnetic"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          whileHover={{ scale: 1.05, rotateY: 10, z: 50 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          style={{ background: 'linear-gradient(135deg, rgba(255, 243, 224, 0.9) 0%, rgba(255, 224, 178, 0.8) 100%)' }}
         >
           <h3>🧠 Dimensão Psicológica</h3>
           <p>

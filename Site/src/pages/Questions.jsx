@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 const Questions = () => {
   return (
     <motion.div
-      className="page-container"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      className="page-container enhanced-card morphing-bg"
+      initial={{ opacity: 0, x: -100, rotateY: -15 }}
+      animate={{ opacity: 1, x: 0, rotateY: 0 }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
     >
       <h1>❓ Análise das Questões do Livro Didático</h1>
       

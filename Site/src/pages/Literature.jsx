@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 const Literature = () => {
   return (
     <motion.div
-      className="page-container"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      className="page-container enhanced-card glow-effect"
+      initial={{ opacity: 0, scale: 0.9, y: 30 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "backOut" }}
     >
       <h1>📚 Exemplo Literário</h1>
       

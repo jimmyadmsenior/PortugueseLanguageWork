@@ -10,27 +10,63 @@ const Expert = () => {
     >
       <h1>👨‍🎓 Análise de Especialista</h1>
       
-      <div className="quote" style={{ background: 'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)', border: '4px solid #3f51b5' }}>
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>
-          <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format" 
-            alt="Dr. Antônio Sérgio Guimarães" 
-            style={{ 
-              width: '80px', 
-              height: '80px', 
-              borderRadius: '50%', 
-              marginRight: '1.5rem',
-              border: '3px solid #3f51b5'
-            }}
-          />
+      <motion.div 
+        className="quote enhanced-card glow-effect" 
+        style={{ 
+          background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%)', 
+          border: '2px solid rgba(0, 0, 0, 0.1)',
+          position: 'relative'
+        }}
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.3 }}
+      >
+        <motion.div 
+          style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <motion.div
+            className="pulse-glow"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ duration: 0.3 }}
+          >
+            <img 
+              src="/s200_antonio.sergio.jpg" 
+              alt="Dr. Antônio Sérgio Guimarães" 
+              style={{ 
+                width: '100px', 
+                height: '100px', 
+                borderRadius: '50%', 
+                marginRight: '1.5rem',
+                border: '3px solid #666666',
+                objectFit: 'cover',
+                filter: 'grayscale(100%) contrast(1.1)',
+                boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'
+              }}
+              onError={(e) => {
+                e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format"
+              }}
+            />
+          </motion.div>
           <div>
-            <h3 style={{ margin: 0, color: '#1a237e' }}>Dr. Antônio Sérgio Alfredo Guimarães</h3>
-            <p style={{ margin: 0, color: '#3949ab', fontStyle: 'italic' }}>
+            <motion.h3 
+              style={{ margin: 0, color: '#000000' }}
+              className="gradient-text shimmer-text"
+            >
+              Dr. Antônio Sérgio Alfredo Guimarães
+            </motion.h3>
+            <motion.p 
+              style={{ margin: 0, color: '#666666', fontStyle: 'italic' }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
               Sociólogo, Professor Titular da USP, Especialista em Relações Raciais
-            </p>
+            </motion.p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <h2>Perspectiva Sociológica sobre o Racismo Brasileiro</h2>
       
